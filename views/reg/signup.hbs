@@ -1,0 +1,22 @@
+<h2>This is a form to sign up</h2>
+
+<div class="container">
+  <form name="contact_form" action="/auth/signup" method="POST">
+    {{#if error}}<div style="color: red">Incorrect data or duplicate email</div>{{/if}}
+    <div>
+      <label>Enter your name here:</label>
+      <input type="text" name="userName" minlength="6" maxlength="20">
+    </div>
+    <div>
+      <label>Enter your email here:</label>
+      <input type="text" name="userEmail">
+    </div>
+    <div>
+      <label>Enter your password here:</label>
+      <input type="password" name="userPassword" minlength="6" maxlength="20">
+    </div>
+    <div>
+      <input class="btn" type="submit" value="Sign up!">
+    </div>
+  </form>
+</div>

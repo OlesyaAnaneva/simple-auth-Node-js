@@ -1,0 +1,18 @@
+<h2>This is a form to log in</h2>
+
+<div class="container">
+  <form action="/auth/login" method="POST">
+    {{#if error}}<div style="color: red"> Data doesn't match</div>{{/if}}
+    <div>
+      <label>Enter your email here:</label>
+      <input type="text" name="userEmail">
+    </div>
+    <div>
+      <label>Enter your password here:</label>
+      <input type="password" name="userPassword">
+    </div>
+    <div>
+      <input class="btn" type="submit" value="Log in!">
+    </div>
+  </form>
+</div>

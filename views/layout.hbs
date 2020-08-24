@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Auth</title>
+</head>
+
+<body>
+  <ul class="navbar">
+    {{#if isAuth}}
+    <li class="navbarLi"><a>{{name}}</a></li>
+    <li class="navbarLi"><a href="/auth/logout">Log out</a></li>
+    {{else}}
+    <li class="navbarLi"><a href="/auth/signup">Sign up</a></li>
+    <li class="navbarLi"><a href="/auth/login">Log in</a></li>
+    {{/if}}
+  </ul>
+  {{{body}}}
+</body>
+
+</html>
+<style>
+  .navbarLi a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    padding: 15px;
+  }
+
+  .navbar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(164, 177, 170, 0.616);
+    margin: 0;
+    padding: 0;
+  }
+</style>
